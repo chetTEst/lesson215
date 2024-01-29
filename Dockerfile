@@ -3,9 +3,11 @@ FROM python:3.11-slim
 
 # Install Jupyter
 RUN pip install notebook
+RUN apt update
+RUN apt install tree
 
 # Install the required Python libraries
-RUN pip install numpy pandas scikit-learn plotly
+RUN pip install numpy pandas scikit-learn plotly pyarrow
 
 # Create a user to avoid running as root
 RUN useradd -m jupyteruser
