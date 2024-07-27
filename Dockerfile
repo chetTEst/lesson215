@@ -12,7 +12,7 @@ RUN pip install numpy pandas scikit-learn plotly pyarrow
 # Create a user to avoid running as root
 RUN useradd -m jupyteruser
 USER jupyteruser
-
+              
 # Set the working directory
 WORKDIR /home/jupyteruser
 
